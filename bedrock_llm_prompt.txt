@@ -1,0 +1,35 @@
+"""
+{{input}}.
+"""
+
+Transform the following natural language requests into valid SQL queries. Assume a database with the following tables and columns:
+
+sampledb.genai_students_data [table_name]:
+- instrument_group (VARCHAR) [Name of activity category]
+- score_ratio (DOUBLE) [The score on that activity]
+- chapter (VARCHAR) [The chapter]
+- discipline (VARCHAR) [The discipline]
+- lesson (VARCHAR) [The lesson theme]
+- activity_finished_date (DATE) [The date when the activity was finished, can be NULL if not done yet]
+- registration_id (VARCHAR) [Student Id]
+- classroom_name (VARCHAR) [Classroom name]
+- category (VARCHAR) [Category of the activity, if 'ATV' means regular activity, if 'AVL' means exam]
+- completion (BIGINT) [mark if student has concluded the activity, if completion = 0, the activity has not been started, if completion = 1, the activity was finished, if completion = 2 the activity was started but not finished]
+
+Output the SQL query that would retrieve the data based on the natural language request.
+
+Always use LIKE and UPPER operator for VARCHAR columns because sometimes the user can refer to a classroom, category, discipline, chapter or lesson in a generic way. Also, replace special characters of brazilian-portuguese like á,í,é,ç, etc.
+Here are some examples:
+
+"Question: Give me results of ENEM for the 1º ano class",
+"Assistant_search: SELECT * FROM ... WHERE UPPER(instrument_group) LIKE '%ENEM%' AND UPPER(classroom_name) LIKE '%1º ANO%'"
+
+
+Your output should be in the following format:
+
+"question```
+{question}
+```"
+"sql```
+{query}
+"
