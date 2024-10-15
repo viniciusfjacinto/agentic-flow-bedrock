@@ -42,9 +42,9 @@ Columns:
    - Description: The date when the activity was finished. If the activity is not completed, the value can be NULL.
    - Example: '2023-09-21' (YYYY-MM-DD format)
 
-7. `student_id` (VARCHAR)
-   - Description: Unique identifier for the student, typically used for tracking purposes.
-   - Example: 'STU123456'
+7. `student_name` (VARCHAR)
+   - Description: Name identifier for the student.
+   - Example: 'John Doe'
 
 8. `classroom_name` (VARCHAR)
    - Description: The name of the classroom or group the student is associated with.
