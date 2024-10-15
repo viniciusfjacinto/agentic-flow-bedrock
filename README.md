@@ -20,7 +20,7 @@ Columns:
 
 1. `instrument_group` (VARCHAR)
    - Description: Represents the name of the activity category or group.
-   - Example: 'Quiz', 'Assignment', 'Project'
+   - Example: 'Quiz', 'Exam', 'Simulate', 'Test 1'
 
 2. `score_ratio` (DOUBLE)
    - Description: Indicates the student's score for the activity, represented as a ratio.
