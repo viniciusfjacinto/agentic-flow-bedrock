@@ -1,5 +1,5 @@
 # Prompt Flows for User-Agent Interaction on Education Data
-This project explicit a simple question-answering flow for teachers interact with an educational database about his students, using AWS solutions like Bedrock, Lambda and Athena.
+This project explicit a simple question-answering flow for teachers interact with an educational database about his students activities and exams in various disciplines, using AWS solutions like Bedrock, Lambda and Athena.
 
 The flow was created in the AWS GenAI Accelerator Event and is inspired in the following project: https://github.com/aws-samples/alexa-and-bedrock-integration
 
