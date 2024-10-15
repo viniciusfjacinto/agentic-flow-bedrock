@@ -6,8 +6,8 @@ import re  # Import the regex module
 
 # Initialize the Athena and S3 services
 athena_client = boto3.client('athena', region_name=os.environ['region'])
-s3_output = os.environ['output']  # The S3 location where the query results will be stored
-database = os.environ['database']  # The Athena database to query
+s3_output = os.environ['output'] 
+database = os.environ['database']
 
 def execute_athena_query(query_string, database):
     # Execute the query
@@ -17,7 +17,7 @@ def execute_athena_query(query_string, database):
             'Database': database
         },
         ResultConfiguration={
-            'OutputLocation': s3_output  # Output S3 bucket for query results
+            'OutputLocation': s3_output 
         }
     )
     
